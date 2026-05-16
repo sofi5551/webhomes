@@ -2,25 +2,181 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #183961;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Navbar ─────────────────────────────────── */
+.hamburger-btn {
+  display: none;
+}
+
+/* Tablet + Mobile  ≤ 1024px */
+@media (max-width: 1024px) {
+  .nav-links-desktop {
+    display: none !important;
+  }
+  .nav-phone-desktop {
+    display: none !important;
+  }
+  .hamburger-btn {
+    display: flex !important;
+  }
+}
+
+/* ── Footer grid ─────────────────────────────── */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: clamp(24px, 4vw, 40px) clamp(20px, 3vw, 32px) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: clamp(28px, 6vw, 40px) !important;
+  }
+}
+
+/* ── How It Works ────────────────────────────── */
+.hiw-card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.hiw-card:hover {
+  box-shadow: 0 20px 60px rgba(24, 57, 97, 0.35);
+  transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+  .hiw-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 480px !important;
+  }
+}
+
+/* ── Hero section ────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    align-items: start !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    min-height: unset !important;
+  }
+  .hero-left {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── About Content ───────────────────────────── */
+@media (max-width: 768px) {
+  .about-content-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .about-content-grid > div:last-child {
+    min-height: 280px;
+  }
+}
+
+@keyframes aboutSlideInLeft {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes aboutImageReveal {
+  from { transform: translateX(-80px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+.about-content-animate {
+  animation: aboutSlideInLeft 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.about-image-animate {
+  animation: aboutImageReveal 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.4s both;
+}
+
+/* ── Shared fade-in ─────────────────────────── */
+@keyframes sectionFadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.section-fade-animate {
+  animation: sectionFadeIn 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ── Our Story ───────────────────────────────── */
+@keyframes ourStoryFadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.our-story-animate {
+  animation: ourStoryFadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ── Contact section ─────────────────────────── */
+@keyframes contactSlideLeft {
+  from { opacity: 0; transform: translateX(-80px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes contactSlideRight {
+  from { opacity: 0; transform: translateX(80px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.contact-form-animate {
+  animation: contactSlideLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.contact-image-animate {
+  animation: contactSlideRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+.contact-submit-btn:hover {
+  background-color: #5aa6d1 !important;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Spinner ─────────────────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Responsive footer padding ───────────────── */
+@media (max-width: 600px) {
+  .footer-inner {
+    padding: 32px 20px 28px !important;
+  }
+  .footer-bottom {
+    padding: 14px 20px !important;
+  }
 }
