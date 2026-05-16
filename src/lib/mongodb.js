@@ -1,13 +1,13 @@
 import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGO_URI;
-let client;
-let clientPromise;
+let clientPromise = null;
 
-if (!global._mongoClientPromise) {
-  client = new MongoClient(uri);
-  global._mongoClientPromise = client.connect();
+export function getMongoClient() {
+  if (!clientPromise) {
+    const uri = process.env.MONGO_URI;
+    if (!uri) throw new Error("MONGO_URI is not defined");
+    const client = new MongoClient(uri);
+    clientPromise = client.connect();
+  }
+  return clientPromise;
 }
-clientPromise = global._mongoClientPromise;
-
-export default clientPromise;

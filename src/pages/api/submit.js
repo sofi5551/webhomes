@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import clientPromise from "@/lib/mongodb";
+import { getMongoClient } from "@/lib/mongodb";
 
 const CC = ["waleed.wurfel@gmail.com", "hanzalamalek36@gmail.com"];
 
@@ -23,7 +23,7 @@ function buildEmailHtml(data) {
         <h1 style="color:white;margin:0;font-size:20px;">New Form Submission — Webhomes</h1>
         <p style="color:#5aa6d1;margin:4px 0 0;font-size:14px;">${data.formType}</p>
       </div>
-      <table style="width:100%;border-collapse:collapse;margin-top:0;">
+      <table style="width:100%;border-collapse:collapse;">
         ${rows}
       </table>
       <div style="background:#f4f6f9;padding:16px 32px;font-size:12px;color:#888;">
@@ -37,13 +37,8 @@ export default async function handler(req, res) {
 
   const data = { ...req.body, submittedAt: new Date().toISOString() };
 
+  // 1 — Send email first
   try {
-    // Save to MongoDB
-    const client = await clientPromise;
-    const db = client.db("webhomes");
-    await db.collection("submissions").insertOne(data);
-
-    // Send email
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -59,10 +54,20 @@ export default async function handler(req, res) {
       subject: `New Submission — ${data.formType || "Contact Form"}`,
       html: buildEmailHtml(data),
     });
-
-    return res.status(200).json({ success: true });
-  } catch (err) {
-    console.error(err);
-    return res.status(500).json({ success: false, error: err.message });
+  } catch (emailErr) {
+    console.error("Email error:", emailErr);
+    return res.status(500).json({ success: false, error: "Failed to send email." });
   }
+
+  // 2 — Save to MongoDB
+  try {
+    const client = await getMongoClient();
+    const db = client.db("webhomes");
+    await db.collection("submissions").insertOne(data);
+  } catch (dbErr) {
+    console.error("DB error:", dbErr);
+    // Email already sent — still return success but log the DB failure
+  }
+
+  return res.status(200).json({ success: true });
 }
