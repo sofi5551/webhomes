@@ -367,12 +367,22 @@ export default function HeroSection() {
                     lineHeight: 1.55,
                   }}
                 >
-                  By submitting this form, you consent to receive SMS messages
-                  and/or emails and/or calls from Webhomes LLC. Message
-                  frequency varies. To unsubscribe, follow the instructions
-                  provided in our communications. Msg &amp; data rates may apply
-                  for SMS. Your information is secure and will not be sold to
-                  third parties. Text HELP for HELP, text STOP to cancel.
+                  By submitting this form, I agree to receive SMS text messages
+                  from The Web Homes regarding my real estate inquiries,
+                  appointments, customer support, property updates, promotional
+                  offers, new listings, marketing communications, and other
+                  information related to The Web Homes' services. Message
+                  frequency varies. Message and data rates may apply. Reply STOP
+                  to opt out and HELP for assistance. Consent is not a condition
+                  of purchase. View our{" "}
+                  <Link href="/privacy-policy" style={{ color: "#5aa6d1" }}>
+                    Privacy Policy
+                  </Link>{" "}
+                  and{" "}
+                  <Link href="/terms-conditions" style={{ color: "#5aa6d1" }}>
+                    Terms & Conditions
+                  </Link>
+                  .
                 </p>
               </div>
 
