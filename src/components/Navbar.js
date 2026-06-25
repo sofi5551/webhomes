@@ -120,7 +120,13 @@ export default function Navbar() {
             }}
           >
             {/* Main links */}
-            <div style={{ display: "flex", alignItems: "center", gap: "clamp(20px, 3vw, 32px)" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "clamp(20px, 3vw, 32px)",
+              }}
+            >
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -142,7 +148,13 @@ export default function Navbar() {
             </div>
 
             {/* Policy links — second row */}
-            <div style={{ display: "flex", alignItems: "center", gap: "clamp(16px, 2vw, 28px)" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "clamp(16px, 2vw, 28px)",
+              }}
+            >
               {policyLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -263,7 +275,7 @@ export default function Navbar() {
           }}
         >
           <Image
-            src="/logo.png"
+            src="/logo-nav.png"
             alt="Webhomes"
             width={130}
             height={44}
