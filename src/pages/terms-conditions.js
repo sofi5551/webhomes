@@ -204,13 +204,13 @@ export default function TermsConditions() {
               </p>
               <p style={{ ...pStyle, margin: "8px 0 0" }}>
                 <strong style={{ color: "#183961" }}>Email:</strong>{" "}
-                <a href="mailto:webhomes.support@gmail.com" style={{ color: "#5aa6d1", textDecoration: "none" }}>
-                  webhomes.support@gmail.com
+                <a href="mailto:info@thewebhomes.com" style={{ color: "#5aa6d1", textDecoration: "none" }}>
+                  info@thewebhomes.com
                 </a>
                 <br />
                 <strong style={{ color: "#183961" }}>Phone:</strong>{" "}
-                <a href="tel:3014011947" style={{ color: "#5aa6d1", textDecoration: "none" }}>
-                  (301) 401-1947
+                <a href="tel:5733129899" style={{ color: "#5aa6d1", textDecoration: "none" }}>
+                  (573) 312-9899
                 </a>
               </p>
             </Fade>
@@ -250,8 +250,8 @@ export default function TermsConditions() {
             <Fade>
               <p style={pStyle}>
                 If you are experiencing any problems, please email us at{" "}
-                <a href="mailto:webhomes.support@gmail.com" style={{ color: "#5aa6d1", textDecoration: "none" }}>
-                  webhomes.support@gmail.com
+                <a href="mailto:info@thewebhomes.com" style={{ color: "#5aa6d1", textDecoration: "none" }}>
+                  info@thewebhomes.com
                 </a>.
               </p>
             </Fade>

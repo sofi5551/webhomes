@@ -242,7 +242,7 @@ export default function Footer() {
                       fontSize: "clamp(12px, 1.1vw, 14px)",
                     }}
                   >
-                    (301) 401-1947
+                    (573) 312-9899
                   </span>
                 </div>
                 <div
@@ -250,7 +250,7 @@ export default function Footer() {
                 >
                   <MailIcon />
                   <a
-                    href="mailto:webhomes.support@gmail.com"
+                    href="mailto:info@thewebhomes.com"
                     style={{
                       color: "white",
                       textDecoration: "none",
@@ -258,7 +258,7 @@ export default function Footer() {
                       wordBreak: "break-all",
                     }}
                   >
-                    webhomes.support@gmail.com
+                    info@thewebhomes.com
                   </a>
                 </div>
               </div>

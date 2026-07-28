@@ -204,7 +204,7 @@ export default function Navbar() {
                   lineHeight: 1.25,
                 }}
               >
-                (301) 401-1947
+                (573) 312-9899
               </div>
               <div
                 style={{
@@ -374,7 +374,7 @@ export default function Navbar() {
                 lineHeight: 1.25,
               }}
             >
-              (301) 401-1947
+              (573) 312-9899
             </div>
             <div
               style={{
