@@ -367,25 +367,48 @@ export default function HeroSection() {
                     lineHeight: 1.55,
                   }}
                 >
-                  By submitting this form, I agree to receive SMS text messages
-                  from The Web Homes regarding my real estate inquiries,
-                  appointments, customer support, property updates, promotional
-                  offers, new listings, marketing communications, and other
-                  information related to The Web Homes' services. Message
-                  frequency varies. Message and data rates may apply. Reply STOP
-                  to opt out and HELP for assistance. Consent is not a condition
-                  of purchase. View our{" "}
-                  <Link href="/privacy-policy" style={{ color: "#5aa6d1" }}>
-                    Privacy Policy
-                  </Link>{" "}
-                  and{" "}
-                  <Link href="/terms-conditions" style={{ color: "#5aa6d1" }}>
-                    Terms & Conditions
-                  </Link>
-                  .
+                  I consent to receive marketing text messages from WEB HOMES
+                  LLC regarding property opportunities, offers, and related
+                  services. Message frequency may vary. Message and data rates
+                  may apply. Reply STOP to opt out or HELP for assistance.
+                  Consent is not a condition of purchase.
                 </p>
               </div>
-
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: "8px",
+                }}
+              >
+                <input
+                  type="checkbox"
+                  defaultChecked={false}
+                  style={{
+                    marginTop: "3px",
+                    flexShrink: 0,
+                    accentColor: "#5aa6d1",
+                    width: "15px",
+                    height: "15px",
+                    cursor: "pointer",
+                  }}
+                />
+                <p
+                  style={{
+                    color: "white",
+                    fontSize: "clamp(11px, 0.85vw, 13px)",
+                    margin: 0,
+                    lineHeight: 1.55,
+                  }}
+                >
+                  I consent to receive informational text messages from WEB
+                  HOMES LLC regarding property inquiries, appointment
+                  coordination, requested follow-ups, customer support, and
+                  property-related updates. Message frequency may vary. Message
+                  and data rates may apply. Reply STOP to opt out or HELP for
+                  assistance.
+                </p>
+              </div>
               {/* Checkbox — Terms */}
               <div
                 style={{
@@ -486,9 +509,9 @@ export default function HeroSection() {
                 >
                   {[
                     "Message and Data rates may apply.",
-                    "Message frequency varies based on ongoing conversational activity.",
-                    "Text HELP for help or STOP to cancel.",
-                    "Your mobile information will not be sold or shared with third parties for promotional or marketing purposes.",
+                    "Message frequency varies based on ongoing communication.",
+                    "Reply HELP for help or STOP to opt out.",
+                    "Your mobile information and SMS consent will not be sold, rented, or shared with third parties or affiliates for marketing or promotional purposes.",
                   ].map((t) => (
                     <li
                       key={t}
@@ -511,7 +534,8 @@ export default function HeroSection() {
                     <Link href="/privacy-policy" style={{ color: "#5aa6d1" }}>
                       Privacy Page
                     </Link>
-                    : How we safeguard your info and how we intend to use it.
+                    : Learn how WEB HOMES LLC collects, uses, and protects your
+                    information.
                   </li>
                   <li
                     style={{
@@ -523,7 +547,8 @@ export default function HeroSection() {
                     <Link href="/terms-conditions" style={{ color: "#5aa6d1" }}>
                       Terms and Conditions Page
                     </Link>
-                    : Legal mumbo jumbo that is really important.
+                    : Review the terms governing use of our services and SMS
+                    communications.
                   </li>
                 </ul>
               </div>
