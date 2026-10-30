@@ -53,6 +53,7 @@ const CloseIcon = () => (
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about-us" },
+  { label: "Get My Offer", href: "/get-my-offer" },
   { label: "Join Our Buyers List", href: "/buyers-list" },
   { label: "Contact", href: "/contact" },
 ];
@@ -196,16 +197,19 @@ export default function Navbar() {
               <HeadsetIcon />
             </div>
             <div>
-              <div
+              <a
+                href="tel:5733129899"
                 style={{
+                  display: "block",
                   color: "#183961",
+                  textDecoration: "none",
                   fontWeight: "700",
                   fontSize: "clamp(14px, 1.4vw, 18px)",
                   lineHeight: 1.25,
                 }}
               >
                 (573) 312-9899
-              </div>
+              </a>
               <div
                 style={{
                   color: "#5aa6d1",
@@ -366,16 +370,19 @@ export default function Navbar() {
             <HeadsetIcon />
           </div>
           <div>
-            <div
+            <a
+              href="tel:5733129899"
               style={{
+                display: "block",
                 color: "#183961",
+                textDecoration: "none",
                 fontWeight: "700",
                 fontSize: "clamp(14px, 4vw, 16px)",
                 lineHeight: 1.25,
               }}
             >
               (573) 312-9899
-            </div>
+            </a>
             <div
               style={{
                 color: "#5aa6d1",

@@ -55,6 +55,7 @@ const MailIcon = () => (
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
+  { label: "Get My Offer", href: "/get-my-offer" },
   { label: "Join Our Buyers List", href: "/buyers-list" },
   { label: "Contact Us", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
@@ -236,14 +237,16 @@ export default function Footer() {
                   style={{ display: "flex", alignItems: "center", gap: "12px" }}
                 >
                   <PhoneIcon />
-                  <span
+                  <a
+                    href="tel:5733129899"
                     style={{
                       color: "white",
+                      textDecoration: "none",
                       fontSize: "clamp(12px, 1.1vw, 14px)",
                     }}
                   >
                     (573) 312-9899
-                  </span>
+                  </a>
                 </div>
                 <div
                   style={{ display: "flex", alignItems: "center", gap: "12px" }}
