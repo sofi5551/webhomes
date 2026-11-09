@@ -60,7 +60,7 @@ const emptyForm = {
 
 const emptyConsents = {
   marketingSmsConsent: false,
-  informationalSmsConsent: false,
+  promotionalSmsConsent: false,
   agreedToTerms: false,
   agreedToPrivacy: false,
 };
@@ -71,8 +71,8 @@ const consentItems = [
     text: "I consent to receive marketing text messages from WEB HOMES LLC regarding property opportunities, offers, and related services. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase.",
   },
   {
-    key: "informationalSmsConsent",
-    text: "I consent to receive informational text messages from WEB HOMES LLC regarding property inquiries, appointment coordination, requested follow-ups, customer support, and property-related updates. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance.",
+    key: "promotionalSmsConsent",
+    text: "By checking this box, I consent to receive marketing and promotional messages including special offers, discounts, new product updates among others from WEB HOMES LLC at the phone number provided. Frequency may vary. Message & data rates may apply. Text HELP for assistance, reply STOP to opt out",
   },
   {
     key: "agreedToTerms",

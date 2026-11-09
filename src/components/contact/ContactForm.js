@@ -376,11 +376,7 @@ function ConsentBlock() {
       <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
         <input type="checkbox" defaultChecked={false} style={checkboxStyle} />
         <p style={checkLabelStyle}>
-          I consent to receive informational text messages from WEB HOMES LLC
-          regarding property inquiries, appointment coordination, requested
-          follow-ups, customer support, and property-related updates. Message
-          frequency may vary. Message and data rates may apply. Reply STOP to
-          opt out or HELP for assistance.
+          By checking this box, I consent to receive marketing and promotional messages including special offers, discounts, new product updates among others from WEB HOMES LLC at the phone number provided. Frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out
         </p>
       </div>
       <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
